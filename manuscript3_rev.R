@@ -545,14 +545,12 @@ for (var in var2) {
     
     # contribution plot -- mainly for mainland-immigrant model output to see mutual taxa differentiating both groups
     
-    if (valmodel == 'malaysia') {
-      if (var == 'country2') {
-        
+    if (paste0(var, '.', valmodel) == 'country2.malaysia') {
+      
         save.image(file = paste0('splsda_', var, '_', valmodel, '.RData'))
         
         setwd(path)
         
-      }
     } else {
       
     splsda.v <- tune.splsda(xv.clr, 						# tune splsda
